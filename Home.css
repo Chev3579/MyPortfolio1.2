@@ -1,0 +1,505 @@
+:root{
+    --input-focus: #2d8cf0;
+    --font-color: #323232;
+    --font-color-sub: #666;
+    --bg-color: #fff;
+    --bg-color-alt: #666;
+    --main-color: #323232;
+  }
+  body {
+      font-family: Arial, sans-serif;
+      display: grid;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+    /* margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;*/
+  } 
+  main{
+    max-width: 40rem;
+    margin: 0 auto;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  /* Box */
+  .main-box{
+    width: 375px;
+    height: 200px;
+    position: relative;
+    background-color: transparent;
+    perspective: 1000px;
+      /* width: 100%;
+      height: 100%; */
+    text-align: center;
+    /* background-color: #282936; */
+    margin-bottom: 50px;
+    margin-left: 125px;
+    padding: 4px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    background: lightgrey;
+    gap: 20px;
+    border-radius: 5px;
+    border: 2px solid var(--main-color);
+    box-shadow: 4px 4px var(--main-color);
+  }
+  .text{
+    font-family: "Noto Sans Thai", sans-serif;
+  }
+  /* Typed Effect */
+  .main-box .animated-text{
+    font-family: "Noto Sans Thai", sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    min-width: 280px;
+    /* align-items: center; */
+    justify-content: center;
+    
+  }
+  .main-box .animated-text .text{
+    position: relative;
+  }
+  .main-box .animated-text .text::before{
+    content: 'ผมชื่อจริงว่า กรัณฑพัชร์ ธิศาเวช';
+    color: rgb(66, 197, 249);
+    animation: words 20s infinite;
+  }
+  .animated-text  .text::after{
+    content: '';
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    background:lightgrey;
+    border-left: 2px solid lightgrey;
+    right: -8px;
+    animation: cursor .8s infinite, typing 20s steps(14) infinite;
+  }
+  @keyframes cursor{
+    to{
+      border-left: 2px solid grey;
+    }
+  }
+  @keyframes words{
+    0%,20%{
+      content: "ผมชื่อเล่นว่าเชฟครับ";
+    }
+    21%,40%{
+      content: "คณาจารณ์ทุกท่าน";
+    }
+    41%,60%{
+      content: "พี่ๆ ที่น่ารักทุกคน";
+    }
+    61%,80%{
+      content: "คณะ ICT (DST)";
+    }
+    81%,100%{
+      content: "ยินดีที่ได้รู้จักครับ";
+    }
+  }
+  @keyframes typing{
+    10%,15%,30%,35%,50%,55%,70%,75%,90%,95%{
+      width: 0;
+    }
+    5%,20%,25%,40%,45%,60%,65%,80%,85%{
+      width: calc(100% + 8px);
+    }
+  }
+  /* Contact Icons */
+  .contact{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+  }
+  .contact .icon{
+    position: relative;
+      background: #fff;
+      border-radius: 50%;
+      margin: 5px;
+      width: 50px;
+      height: 50px;
+      font-size: 18px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  .contact .icon .tooltip{
+    position: absolute;
+      top: 0;
+      font-size: 14px;
+      background: #fff;
+      color: #fff;
+      padding: 5px 8px;
+      border-radius: 5px;
+      box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  .contact .tootip::before{
+    position: absolute;
+      content: "";
+      height: 8px;
+      width: 8px;
+      background: #fff;
+      bottom: -3px;
+      left: 50%;
+      transform: translate(-50%) rotate(45deg);
+      transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  .contact .icon:hover .tooltip{
+    top: -35px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  .contact .icon:hover  .tooltip{
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+  }
+  /* Facebook */
+  .contact .facebook:hover,
+  .contact .facebook:hover .tooltip,
+  .contact .facebook:hover .tooltip::before {
+    background: #1877f2;
+    color: #fff;
+  }
+  .contact .Line:hover,
+    .contact .Line:hover .tooltip,
+    .contact .Line:hover .tooltip::before {
+      background-color: #9befa8;
+      color: #fff;
+    }
+    
+    .contact .instagram:hover,
+    .contact .instagram:hover .tooltip,
+    .contact .instagram:hover .tooltip::before {
+      background: #e4405f;
+      color: #fff;
+    }
+  
+  
+    /* ปุ่ม Next */
+    button.learn-more {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+      outline: none;
+      border: 0;
+      vertical-align: middle;
+      text-decoration: none;
+      background: transparent;
+      padding: 0;
+      font-size: inherit;
+      font-family: inherit;
+      width: 12rem;
+      height: auto;
+    }
+  
+    button.learn-more .circle {
+      transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+      position: relative;
+      display: block;
+      margin: 0;
+      width: 3rem;
+      height: 3rem;
+      background: #282936;
+      border-radius: 1.625rem;
+    }
+  
+    button.learn-more .circle .icon {
+      transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      background: #fff;
+    }
+  
+    button.learn-more .circle .icon.arrow {
+      left: 0.625rem;
+      width: 1.125rem;
+      height: 0.125rem;
+      background: none;
+    }
+  
+    button.learn-more .circle .icon.arrow::before {
+      position: absolute;
+      content: "";
+      top: -0.29rem;
+      right: 0.0625rem;
+      width: 0.625rem;
+      height: 0.625rem;
+      border-top: 0.125rem solid #fff;
+      border-right: 0.125rem solid #fff;
+      transform: rotate(45deg);
+    }
+  
+    button.learn-more .button-text {
+      transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+      position: absolute;
+      top: 0;
+      left: 30px;
+      right: 0;
+      bottom: 0;
+      padding: 0.75rem 0;
+      margin: 0 0 0 1.85rem;
+      color: #282936;
+      font-weight: 700;
+      line-height: 1.6;
+      text-align: left;
+      text-transform: uppercase;
+    }
+  
+    button:hover .circle {
+      width: 66%;
+    }
+  
+    button:hover .circle .icon.arrow {
+      background: #fff;
+      transform: translate(1rem, 0);
+    }
+  
+    button:hover .button-text {
+      color: #fff;
+    }
+  
+    /* ปุ่ม Back */
+    .button-next-back{
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row-reverse;
+      gap: 300px;
+      /* margin-bottom: 35px; */
+      /* margin-top: -100px; */
+      align-items: center;
+      width: 30rem;
+      margin-left: 220px;
+      margin-bottom: 150px;
+    }
+    button.backward {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+      outline: none;
+      border: 0;
+      vertical-align: middle;
+      text-decoration: none;
+      background: transparent;
+      padding: 0;
+      font-size: inherit;
+      font-family: inherit;
+      width: 12rem;
+      height: auto;
+      
+    }
+  
+    button.backward .circle {
+      transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+      position: relative;
+      display: block;
+      margin: 0;
+      width: 3rem;
+      height: 3rem;
+      background: #282936;
+      border-radius: 1.625rem;
+    }
+  
+    button.backward .circle .icon {
+      transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      background: #fff;
+      left: 1.05rem; /* ลูกศรอยู่ทางซ้าย */
+    }
+  
+    button.backward .circle .icon.arrow {
+      align-items: center;
+      width: 1.125rem;
+      height: 0.125rem;
+      background: none;
+    }
+  
+    button.backward .circle .icon.arrow::before {
+      position: absolute;
+      content: "";
+      top: -0.29rem;
+      left: 0.0625rem;
+      width: 0.625rem;
+      height: 0.625rem;
+      border-top: 0.125rem solid #fff;
+      border-left: 0.125rem solid #fff;
+      transform: rotate(-45deg); /* ลูกศรหมุนไปทางซ้าย */
+    }
+  
+    button.backward .button-text {
+      transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+      position: absolute;
+      top: 0;
+      left: 55px; /* ย้ายตัวอักษรห่างจากลูกศร */
+      padding: 0.75rem 0;
+      margin: 0;
+      color: #282936;
+      font-weight: 700;
+      line-height: 1.6;
+      text-align: left;
+      text-transform: uppercase;
+    }
+  
+    button.backward:hover .circle {
+      width: 66%; /* ขยายขอบวงกลมให้ครอบคลุมปุ่มทั้งหมด */
+      border-radius: 1.625rem; /* คงความโค้งของมุม */
+    }
+  
+    button.backward:hover .button-text {
+      color: #fff; /* เปลี่ยนสีข้อความเมื่อ hover */
+    }
+  
+    button.backward:hover .circle .icon.arrow {
+      background: #fff;
+      transform: none; /* ลูกศรไม่ขยับ */
+    }
+  /* Navigation-bar */
+  :root{
+    --clr: #F0F0F0;
+    --yellow: #fac234;
+    --blue: #17468d;
+    --blow: #9f7920;
+    --black: #333;
+  }
+  .navigation {
+      position: relative;
+      width: 350px;
+      background: #fff;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: last baseline;
+      margin-left: 140px;
+      margin-top: 200px;
+  }
+  
+  
+  .navigation ul {
+      display: flex;
+      width: 300px;
+      position: relative;
+  }
+  
+  .navigation ul li {
+    position: relative;
+    list-style: none;
+    width: 70px;
+    height: 70px;
+    z-index: 1;
+  }
+  
+  .navigation ul li a { /*min 4:58* and edit*/
+      display: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      width: 100%;
+      text-decoration: center;
+      font-weight: 500;
+  }
+  
+  .navigation ul li a .icon { /*it have edit */
+      position: relative;
+      display: block;
+      line-height: 75px;
+      font-size: 1.5em;
+      text-align: center;
+      transition: 0.5s;
+      color: #333;
+  }
+  .navigation ul li.active a .icon {
+    transform: translateY(-35.5px);
+    color: var(--yellow);
+  }
+  
+  .navigation ul li a .text { /*it have edit*/
+      position: absolute;
+      color: black;
+      font-weight: 500;
+      font-size: 0.75em;
+      letter-spacing: 0.05em;
+      transition: 0.5s;
+      transform: translateY(20px); 
+      opacity: 0;
+  }
+  
+  .navigation ul li.active a .text {
+      opacity: 1;
+      transform: translateY(15px);
+  }
+  
+  .indicator{
+    position: absolute;
+    top: -50%;
+    width: 70px;
+    height: 70px;
+    background: var(--black);
+    border-radius: 50%;
+    border: 6px solid var(--clr);
+    transition: .5s; /*<--this edit*/
+  }
+  .indicator::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -22px;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border-top-right-radius: 20px;
+    box-shadow: 0px -10px 0 0 var(--clr);
+  }
+  
+  .indicator::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -22px;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border-top-left-radius: 20px; 
+    box-shadow: 0px -10px 0 0 var(--clr);
+  }
+  
+  .navigation ul li:nth-child(1).active ~ .indicator{
+    transform: translateX(calc(70px * 0));
+  }
+  
+  .navigation ul li:nth-child(2).active ~ .indicator{
+    transform: translateX(calc(70px * 1));
+  }
+  
+  .navigation ul li:nth-child(3).active ~ .indicator{
+    transform: translateX(calc(70px * 2));
+  }
+  
+  .navigation ul li:nth-child(4).active ~ .indicator{
+    transform: translateX(calc(70px * 3));
+  }
+
+  

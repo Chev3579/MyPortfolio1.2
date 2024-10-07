@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="Profile.css">
+    <script src="https://kit.fontawesome.com/7a945aa41d.js" crossorigin="anonymous"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://kit.fontawesome.com/7a945aa41d.js" crossorigin="anonymous"></script>
+    <!-- Font Google -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&display=swap');
+    </style>
+</head>
+
+<body>
+<main>
+<div class="button-next-back">
+    
+    <!-- ปุ่ม Back -->
+      <a href="Home.html" target="_self">
+          <button class="backward">
+              <span class="circle" aria-hidden="true">
+                  <span class="icon arrow"></span>
+                </span>
+                <span class="button-text">Prev</span>
+            </button>
+        </a>
+        <!-- ปุ่ม Next -->
+        <a href="Education.html">
+            <button class="learn-more">
+                <span class="circle" aria-hidden="true">
+                <span class="icon arrow"></span>
+                </span>
+                <span class="button-text">Next</span>
+              </button>
+        </a>
+</div>      
+
+<!-- Wraper Cards -->
+<div class="wrapper">
+    <div class="card-switch">
+        <label class="switch">
+           <input type="checkbox" class="toggle">
+           <span class="slider"></span>
+           <span class="card-side"></span>
+           <div class="flip-card__inner">
+              <div class="flip-card__front">
+                 <div class="title">ข้อมูลส่วนตัว</div>
+                 <form class="flip-card__form" action="">
+                    <p class="flip-card__input"><strong>ชื่อ:</strong> กรัณฑพัชร์ ธิศาเวช (เชฟ)</p>
+                    <p class="flip-card__input"><strong>วันเกิด:</strong> 27 พฤษภาคม 2550</p>
+                    <p class="flip-card__input"><strong>สัญชาติ:</strong> ไทย</p>
+                    <p class="flip-card__input"><strong>ศาสนา:</strong> พุทธ</p>
+                    <!-- <a href="https://maps.app.goo.gl/BGRo7sXtqY5adbKX7" target="_blank" rel="noopener noreferrer"></a><p class="flip-card__input"><strong>ที่อยู่:</strong></a> ที่อยู่ฉัน</p></a> -->
+                    <a class="flip-card__input address" target="_blank" href="https://maps.app.goo.gl/BGRo7sXtqY5adbKX7" title=""><strong >ที่อยู่ฉัน:</strong> ที่อยู่ของฉัน</a>
+                </form>
+              </div>
+                   
+                   <!----check-point---->
+              <div class="flip-card__back">
+                 <div class="title">ข้อมูลการเรียน</div>
+                 <form class="flip-card__form" action="">
+                    <p class="flip-card__input"><strong>เกรดเฉลี่ยน (4 ภาคเรียน):</strong> 3.00</p>
+                    <p class="flip-card__input"><strong>สายการเรียน:</strong> วิทย์ - คณิต</p>
+                    
+                 </form>
+              </div>
+           </div>
+        </label>
+    </div>   
+</div>
+
+<div class="navigation">
+    <ul>
+        <li class="list">
+            <a href="Home.html">
+                <span class="icon"><i class="fa-solid fa-house-chimney"></i></span>
+                <span class="text">Home</span>
+            </a>
+        </li>
+        <li class="list active">
+            <a href="Profile.html">
+                <span class="icon"><i class="fa-solid fa-user"></i></span>
+                <span class="text">Profile</span>
+            </a>
+        </li>
+        <li class="list">
+            <a href="Education.html">
+                <span class="icon"><i class="fa-solid fa-school"></i></span>
+                <span class="text">Education</span>
+            </a>
+        </li>
+        <li class="list">
+            <a href="Certificates.html">
+                <span class="icon"><i class="fa-solid fa-certificate"></i></span>
+                <span class="text">Certificates</span>
+            </a>
+        </li>
+        <div class="indicator"></div>
+    </ul>
+  </div>
+</main>
+  <script>
+    const list = document.querySelectorAll('.list');
+    function activeLink(){
+      list.forEach((item) =>item.classList.remove('active'));
+      this.classList.add('active')
+    }
+    list.forEach((item)=> item.addEventListener('click', activeLink))
+  </script>
+  </body>
+</html>

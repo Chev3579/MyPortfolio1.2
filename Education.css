@@ -1,0 +1,411 @@
+body {
+    font-family: Arial, sans-serif;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+main{
+  max-width: 40rem;
+  margin: 0 auto;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+/* Card Education */
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  margin-bottom: 45px;
+}
+
+.card-list .card-item{
+    list-style: none;
+}
+.card-wrapper{
+    max-width: 450px;
+    margin: 0 100px 35px; 
+    padding: 20px 10px;
+    overflow: hidden;
+}
+.card-list .card-item .card-link{
+    user-select: none;
+    display: block;
+    background-color: white;
+    width: 380px;
+    padding: 18px;
+    border-radius: 12px;
+    text-decoration: none;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, .045);
+    transition: 0.2s ease;
+}
+.card-list .card-item .card-link:hover{
+    border: 3px solid #3F7BCC;
+    box-shadow: 1.5px 1.5px rgba(97, 93, 93, 0.388);
+    width: 385px;
+}
+
+.card-list .card-item .card-image{
+    width: 345px;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 10px;
+    
+}
+.card-list .card-link .badge{
+    /* color: white; */
+    font-size: .95rem;
+    font-weight: 500;
+    margin: 16px 0 18px;
+    /* background-color: #5372f0; */
+    width: 45%;
+    height: 25px;
+    text-align: center;
+    border-radius: 10px;
+}
+.card-list .card-link .badge.pattaya{
+    color: #205c20;
+    background: #d6f8d6;
+}
+.card-list .card-link .badge.bowin{
+    color: #000000fb;
+    background: #f9ed10bb;
+}
+.card-list .card-link .badge.srisuvit{
+    color: #b22485;
+    background: #f7dff5;
+}
+.card-list .card-link .badge.thanapornwittaya{
+    color: #fff;
+    background: #3F7BCC;
+}
+.card-list .card-link .card-title{
+    font-size: 1.19rem;
+    color: #000;
+    font-weight: 600;
+}
+.card-list .card-link .card-button{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    margin: 30px 0 5px;
+    border: 2px solid #5372f0;
+    transform: rotate(-45deg);
+    transition: .4s ease;
+}
+.card-list .card-link:hover .card-button{
+    color: #fff;
+    background: #5372f0;
+    box-shadow: 2px 2.5px 5px rgba(78, 72, 72, 0.53);
+}
+.swiper-button-prev:hover{
+    transform: translateX(-.2cm);
+    transition: .5s ease;
+}
+.swiper-button-next:hover{
+    transform: translateX(.2cm);
+    transition: .5s ease;
+} 
+  /* ปุ่ม Next */
+.button-next-back{
+  display: flex;
+  gap: 50%;
+}
+  button.learn-more {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+    width: 12rem;
+    height: auto;
+  }
+
+  button.learn-more .circle {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: relative;
+    display: block;
+    margin: 0;
+    width: 3rem;
+    height: 3rem;
+    background: #282936;
+    border-radius: 1.625rem;
+  }
+
+  button.learn-more .circle .icon {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: #fff;
+  }
+
+  button.learn-more .circle .icon.arrow {
+    left: 0.625rem;
+    width: 1.125rem;
+    height: 0.125rem;
+    background: none;
+  }
+
+  button.learn-more .circle .icon.arrow::before {
+    position: absolute;
+    content: "";
+    top: -0.29rem;
+    right: 0.0625rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-top: 0.125rem solid #fff;
+    border-right: 0.125rem solid #fff;
+    transform: rotate(45deg);
+  }
+
+  button.learn-more .button-text {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    left: 30px;
+    right: 0;
+    bottom: 0;
+    padding: 0.75rem 0;
+    margin: 0 0 0 1.85rem;
+    color: #282936;
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: left;
+    text-transform: uppercase;
+  }
+
+  button:hover .circle {
+    width: 66%;
+  }
+
+  button:hover .circle .icon.arrow {
+    background: #fff;
+    transform: translate(1rem, 0);
+  }
+
+  button:hover .button-text {
+    color: #fff;
+  }
+
+  /* ปุ่ม Back */
+  button.backward {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+    width: 12rem;
+    height: auto;
+  }
+
+  button.backward .circle {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: relative;
+    display: block;
+    margin: 0;
+    width: 3rem;
+    height: 3rem;
+    background: #282936;
+    border-radius: 1.625rem;
+  }
+
+  button.backward .circle .icon {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: #fff;
+    left: 1.05rem; /* ลูกศรอยู่ทางซ้าย */
+  }
+
+  button.backward .circle .icon.arrow {
+    align-items: center;
+    width: 1.125rem;
+    height: 0.125rem;
+    background: none;
+  }
+
+  button.backward .circle .icon.arrow::before {
+    position: absolute;
+    content: "";
+    top: -0.29rem;
+    left: 0.0625rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-top: 0.125rem solid #fff;
+    border-left: 0.125rem solid #fff;
+    transform: rotate(-45deg); /* ลูกศรหมุนไปทางซ้าย */
+  }
+
+  button.backward .button-text {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    left: 55px; /* ย้ายตัวอักษรห่างจากลูกศร */
+    padding: 0.75rem 0;
+    margin: 0;
+    color: #282936;
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: left;
+    text-transform: uppercase;
+  }
+
+  button.backward:hover .circle {
+    width: 66%; /* ขยายขอบวงกลมให้ครอบคลุมปุ่มทั้งหมด */
+    border-radius: 1.625rem; /* คงความโค้งของมุม */
+  }
+
+  button.backward:hover .button-text {
+    color: #fff; /* เปลี่ยนสีข้อความเมื่อ hover */
+  }
+
+  button.backward:hover .circle .icon.arrow {
+    background: #fff;
+    transform: none; /* ลูกศรไม่ขยับ */
+  }
+/* Navigation-bar */
+:root{
+    --clr: #F0F0F0;
+    --yellow: #fac234;
+    --blue: #17468d;
+    --blow: #9f7920;
+    --black: #333;
+    }
+    .navigation {
+      position: relative;
+      width: 350px;
+      background: #fff;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 135px;
+    }
+    
+    .navigation ul {
+      display: flex;
+      width: 300px;
+      position: relative;
+    }
+    
+    .navigation ul li {
+    position: relative;
+    list-style: none;
+    width: 70px;
+    height: 70px;
+    z-index: 1;
+    }
+    
+    .navigation ul li a { /*min 4:58* and edit*/
+      display: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      width: 100%;
+      text-decoration: center;
+      font-weight: 500;
+    }
+    
+    .navigation ul li a .icon { /*it have edit */
+      position: relative;
+      display: block;
+      line-height: 75px;
+      font-size: 1.5em;
+      text-align: center;
+      transition: 0.5s;
+      color: #333;
+    }
+    .navigation ul li.active a .icon {
+    transform: translateY(-35.5px);
+    color: var(--yellow);
+    }
+    
+    .navigation ul li a .text { /*it have edit*/
+      position: absolute;
+      color: black;
+      font-weight: 500;
+      font-size: 0.75em;
+      letter-spacing: 0.05em;
+      transition: 0.5s;
+      transform: translateY(20px); 
+      opacity: 0;
+    }
+    
+    .navigation ul li.active a .text {
+      opacity: 1;
+      transform: translateY(15px);
+    }
+    
+    .indicator{
+    position: absolute;
+    top: -50%;
+    width: 70px;
+    height: 70px;
+    background: var(--black);
+    border-radius: 50%;
+    border: 6px solid var(--clr);
+    transition: .5s; /*<--this edit*/
+    }
+    .indicator::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -22px;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border-top-right-radius: 20px;
+    box-shadow: 0px -10px 0 0 var(--clr);
+    }
+    
+    .indicator::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -22px;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border-top-left-radius: 20px; 
+    box-shadow: 0px -10px 0 0 var(--clr);
+    }
+    
+    .navigation ul li:nth-child(1).active ~ .indicator{
+    transform: translateX(calc(70px * 0));
+    }
+    
+    .navigation ul li:nth-child(2).active ~ .indicator{
+    transform: translateX(calc(70px * 1));
+    }
+    
+    .navigation ul li:nth-child(3).active ~ .indicator{
+    transform: translateX(calc(70px * 2));
+    }
+    
+    .navigation ul li:nth-child(4).active ~ .indicator{
+    transform: translateX(calc(70px * 3));
+    }
